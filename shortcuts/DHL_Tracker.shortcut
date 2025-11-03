@@ -211,10 +211,10 @@
 							<array>
 								<dict>
 									<key>WFWorkflowActionIdentifier</key>
-									<string>is.workflow.actions.text</string>
+									<string>is.workflow.actions.url</string>
 									<key>WFWorkflowActionParameters</key>
 									<dict>
-										<key>WFTextActionText</key>
+										<key>WFURLActionURL</key>
 										<dict>
 											<key>Value</key>
 											<dict>
@@ -224,7 +224,7 @@
 												<dict>
 													<key>attachmentsByRange</key>
 													<dict>
-														<key>{87, 15}</key>
+														<key>{87, 0}</key>
 														<dict>
 															<key>Type</key>
 															<string>WFVariableAttachment</string>
@@ -233,7 +233,7 @@
 														</dict>
 													</dict>
 													<key>string</key>
-													<string>https://www.dhl.com/global-en/home/tracking/tracking-express.html?submit=1&amp;tracking-id=Tracking Number</string>
+													<string>https://www.dhl.com/global-en/home/tracking/tracking-express.html?submit=1&amp;tracking-id=</string>
 												</dict>
 											</dict>
 											<key>WFSerializationType</key>
@@ -257,10 +257,10 @@
 							<array>
 								<dict>
 									<key>WFWorkflowActionIdentifier</key>
-									<string>is.workflow.actions.text</string>
+									<string>is.workflow.actions.url</string>
 									<key>WFWorkflowActionParameters</key>
 									<dict>
-										<key>WFTextActionText</key>
+										<key>WFURLActionURL</key>
 										<dict>
 											<key>Value</key>
 											<dict>
@@ -270,7 +270,7 @@
 												<dict>
 													<key>attachmentsByRange</key>
 													<dict>
-														<key>{86, 15}</key>
+														<key>{86, 0}</key>
 														<dict>
 															<key>Type</key>
 															<string>WFVariableAttachment</string>
@@ -279,7 +279,7 @@
 														</dict>
 													</dict>
 													<key>string</key>
-													<string>https://www.dhl.com/global-en/home/tracking/tracking-parcel.html?submit=1&amp;tracking-id=Tracking Number</string>
+													<string>https://www.dhl.com/global-en/home/tracking/tracking-parcel.html?submit=1&amp;tracking-id=</string>
 												</dict>
 											</dict>
 											<key>WFSerializationType</key>

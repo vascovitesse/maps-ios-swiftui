@@ -87,6 +87,20 @@ def text_with_variable(template: str, variable: str):
     }
 
 
+def url_with_variable(prefix: str, variable: str):
+    start = len(prefix)
+    template = prefix
+    return {
+        "WFWorkflowActionIdentifier": "is.workflow.actions.url",
+        "WFWorkflowActionParameters": {
+            "WFURLActionURL": token_string(
+                template,
+                OrderedDict([((start, 0), variable)]),
+            )
+        },
+    }
+
+
 def open_url_action():
     return {"WFWorkflowActionIdentifier": "is.workflow.actions.openurl"}
 
@@ -180,8 +194,8 @@ actions.append(
             (
                 "Express",
                 [
-                    text_with_variable(
-                        "https://www.dhl.com/global-en/home/tracking/tracking-express.html?submit=1&tracking-id=Tracking Number",
+                    url_with_variable(
+                        "https://www.dhl.com/global-en/home/tracking/tracking-express.html?submit=1&tracking-id=",
                         "Tracking Number",
                     ),
                     open_url_action(),
@@ -190,8 +204,8 @@ actions.append(
             (
                 "Parcel & eCommerce",
                 [
-                    text_with_variable(
-                        "https://www.dhl.com/global-en/home/tracking/tracking-parcel.html?submit=1&tracking-id=Tracking Number",
+                    url_with_variable(
+                        "https://www.dhl.com/global-en/home/tracking/tracking-parcel.html?submit=1&tracking-id=",
                         "Tracking Number",
                     ),
                     open_url_action(),

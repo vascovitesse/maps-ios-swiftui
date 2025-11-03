@@ -26,6 +26,8 @@ repository. macOS treats `.shortcut` bundles just like any other Shortcuts expor
 
 Once imported you can still tweak any of the actions described later, but you no longer need to assemble them one by one. Future updates are easy too—just download the newer `.shortcut` file and repeat these steps to replace the existing one.
 
+> **Tip:** If an earlier copy of the shortcut only showed the tracking URL instead of opening it automatically, delete that version and import this updated file. The download now uses the dedicated **URL → Open URLs** action pair so picking **Express** or **Parcel & eCommerce** launches your browser immediately with the tracking number filled in.
+
 ## Overview
 
 ### Install & Set Up the Shortcut (for beginners)
@@ -100,18 +102,18 @@ The shortcut:
      - `Parcel & eCommerce`
 
 9. Inside the **Express** menu branch:
-   1. **Text**
-      - Text value: `https://www.dhl.com/global-en/home/tracking/tracking-express.html?submit=1&tracking-id=[[Tracking Number]]`
-      - Replace `[[Tracking Number]]` by tapping the variable button and selecting the Magic Variable created earlier.
+   1. **URL**
+      - URL value: `https://www.dhl.com/global-en/home/tracking/tracking-express.html?submit=1&tracking-id=`
+      - Place the cursor at the end of the field, tap the variable button, and choose the `Tracking Number` Magic Variable to append it directly after the equals sign (no extra spaces).
    2. **Open URLs**
-      - URL: Drag the Magic Variable from the Text action above.
+      - URL: Leave it set to **Provided Input** so it opens the URL action immediately above.
 
 10. Inside the **Parcel & eCommerce** menu branch:
-   1. **Text**
-      - Text value: `https://www.dhl.com/global-en/home/tracking/tracking-parcel.html?submit=1&tracking-id=[[Tracking Number]]`
-      - Again, replace `[[Tracking Number]]` with the Magic Variable from earlier.
+   1. **URL**
+      - URL value: `https://www.dhl.com/global-en/home/tracking/tracking-parcel.html?submit=1&tracking-id=`
+      - Append the same `Tracking Number` Magic Variable right after the equals sign.
    2. **Open URLs**
-      - URL: Drag the Magic Variable from the Text action above.
+      - URL: Leave the default **Provided Input** so the link opens instantly.
 
 11. **Choose from Menu** (appears after both tracking branches)
    - Menu Prompt: `Save this tracking number as a favorite?`
