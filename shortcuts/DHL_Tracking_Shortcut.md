@@ -6,7 +6,13 @@ This guide walks you through building a macOS Shortcut that quickly opens the co
 
 If you just want to import everything that’s described below, grab the
 [`shortcuts/DHL_Tracker.shortcut`](DHL_Tracker.shortcut) file that now lives in this
-repository. macOS treats `.shortcut` bundles just like any other Shortcuts export, but if you’re new to shortcuts follow these exact steps:
+repository. macOS treats `.shortcut` bundles just like any other Shortcuts export. The
+latest macOS builds (including 26.0.1) block double-clicking unsigned shortcut files,
+so use **one** of the import options below:
+
+### Option A – Import straight from Finder (works on macOS builds that still allow it)
+
+If your Mac still lets you open unsigned exports directly, follow these exact steps:
 
 1. **Download the shortcut file**
    - Click the `DHL_Tracker.shortcut` link above. In the GitHub preview page choose **Download raw file** (or press `⌘ + S`).
@@ -25,6 +31,22 @@ repository. macOS treats `.shortcut` bundles just like any other Shortcuts expor
    - macOS will request permission the first time the shortcut tries to read or write reminders. Choose **OK** so favorites keep working.
 
 Once imported you can still tweak any of the actions described later, but you no longer need to assemble them one by one. Future updates are easy too—just download the newer `.shortcut` file and repeat these steps to replace the existing one.
+
+### Option B – Import with the Shortcuts command-line tool (bypasses the unsigned warning)
+
+1. Open **Terminal** and change into the folder that contains the downloaded shortcut.
+   ```bash
+   cd ~/Downloads
+   ```
+2. Use the built-in `shortcuts` command to import the workflow directly into the Shortcuts app:
+   ```bash
+   shortcuts import DHL_Tracker.shortcut
+   ```
+   - The first time you run the command macOS may ask for permission to control Shortcuts—grant it so the import can finish.
+3. Open the Shortcuts app. The workflow appears in **All Shortcuts** with the name **DHL Tracker** (you can rename it if you like).
+4. Run it once so Shortcuts can request access to the Reminders list that stores your favorites.
+
+If you prefer not to keep the downloaded file, you can delete it after the command succeeds—the shortcut now lives inside the Shortcuts app.
 
 > **Tip:** If an earlier copy of the shortcut only showed the tracking URL instead of opening it automatically, delete that version and import this updated file. The download now uses the dedicated **URL → Open URLs** action pair so picking **Express** or **Parcel & eCommerce** launches your browser immediately with the tracking number filled in.
 
