@@ -40,8 +40,10 @@ Once imported you can still tweak any of the actions described later, but you no
    ```
 2. Use the built-in `shortcuts` command to import the workflow directly into the Shortcuts app:
    ```bash
-   shortcuts import DHL_Tracker.shortcut
+   shortcuts import --filepath ./DHL_Tracker.shortcut
    ```
+   - The flag is required—without `--filepath` the command exits with “unexpected arguments.”
+   - If the shortcut lives somewhere else, replace `./DHL_Tracker.shortcut` with the correct path (for example, `~/Downloads/DHL_Tracker.shortcut`).
    - The first time you run the command macOS may ask for permission to control Shortcuts—grant it so the import can finish.
 3. Open the Shortcuts app. The workflow appears in **All Shortcuts** with the name **DHL Tracker** (you can rename it if you like).
 4. Run it once so Shortcuts can request access to the Reminders list that stores your favorites.
